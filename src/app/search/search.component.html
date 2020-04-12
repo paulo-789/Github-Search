@@ -1,3 +1,36 @@
-<div >
-    <h1>Github Search</h1>
+<div class="container-fluid">
+    <div class="header">
+        <h2>Github Search</h2>
+        <form>
+            <input type="text" name="username" placeholder="search user" [(ngModel)]="username">
+            <button id="user" class="btn btn-success" type="submit" (click)="dosearch()">search</button>
+
+        </form>
+    </div>
+    <br>
+    <!-- class="form-control" -->
+    <div class="row">
+        <div class="col-4">
+            <div *ngIf="user">
+                <div class="card" style="width:350px">
+                    <div class="card-body">
+                        <img class="card-img" src="{{user.avatar_url}}" alt="avatar" style="width:100%">
+                    </div>
+                </div>
+                    <h3 class="card-title" *ngIf="user.name"> {{user.name}}</h3>
+            </div>
+        </div>
+    
+    <div class="col-8">
+        <div class="repository">
+            <h2>Repositories</h2>
+            <hr>
+            <div *ngFor="let repo of repos">
+                <h4>{{repo.name}}</h4>
+                <p>{{repo.description}}</p>
+                <a href="{{repo.html_url}}" target="_blank" class="btn btn-info">View On Github</a>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
