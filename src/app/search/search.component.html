@@ -22,15 +22,16 @@
                     </div>
             </div>
         </div>
-    
+        <ng-progress></ng-progress>
     <div class="col-8">
         <div class="repository" style="text-align: center;">
             <h2>Repositories</h2>
             <hr>
             <div *ngFor="let repo of repos">
                 <h4>{{ user.name}}</h4>
-                <h4>{{repo.name}}</h4>
-                <p>{{repo.description}}</p>
+                <h4>{{repo.name}} </h4>
+                <p>{{repo.description}} </p> 
+                 <p>{{user.created_at|date}}</p>
                 <a href="{{repo.html_url}}" target="_blank" class="btn btn-info">View On Github</a>
             </div>
         </div>
