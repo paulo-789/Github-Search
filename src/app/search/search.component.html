@@ -17,15 +17,18 @@
                         <img class="card-img" src="{{user.avatar_url}}" alt="avatar" style="width:100%">
                     </div>
                 </div>
-                    <h3 class="card-title" *ngIf="user.name"> {{user.name}}</h3>
+                    <div class="card-title" *ngIf="user.name" >
+                    <h3>{{ user.name }}</h3>
+                    </div>
             </div>
         </div>
     
     <div class="col-8">
-        <div class="repository">
+        <div class="repository" style="text-align: center;">
             <h2>Repositories</h2>
             <hr>
             <div *ngFor="let repo of repos">
+                <h4>{{ user.name}}</h4>
                 <h4>{{repo.name}}</h4>
                 <p>{{repo.description}}</p>
                 <a href="{{repo.html_url}}" target="_blank" class="btn btn-info">View On Github</a>
