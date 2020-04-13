@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <img class="card-img" src="{{user.avatar_url}}" alt="avatar" style="width:100%">
                         <div class="card-title" *ngIf="user.name" >
-                            <h3>Name :{{ user.name }}</h3>
+                            <h5>Name :{{ user.name }}</h5>
                          </div>
                     </div>
                 </div>
@@ -28,7 +28,6 @@
             <h2>Repositories</h2>
             <hr>
             <div *ngFor="let repo of repos">
-                <h4>{{ user.name}}</h4>
                 <h4>{{repo.name}} </h4>
                 <p>{{repo.description}} </p> 
                  <p>{{user.created_at|date}}</p>
