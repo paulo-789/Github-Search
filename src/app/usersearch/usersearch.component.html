@@ -1,8 +1,41 @@
-<div class="header">
-    <h2>Github Search</h2>
-    <form>
-        <input type="text" name="username" placeholder="search user" [(ngModel)]="username">
-        <button id="user" class="btn btn-success" type="submit" (click)="dosearch()">search</button>
+<div class="container-fluid">
+    <div class="header">
+        <form>
+            <input type="text" name="username" placeholder="search user" [(ngModel)]="username">
+            <button id="user" class="btn btn-success" type="submit" (click)="dosearch()">search</button>
 
-    </form>
+        </form>
+    </div>
+    <br>
+    <!-- class="form-control" -->
+    <div class="row">
+        <div class="col-4">
+            <div *ngIf="user">
+                <div class="card" style="width:350px">
+                    <div class="card-body">
+                        <img class="card-img" src="{{user.avatar_url}}" alt="avatar" style="width:100%">
+                        <div class="card-title" *ngIf="user.name" >
+                            <h3>Name :{{ user.name }}</h3>
+                         </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+        
+    <div class="col-8">
+        <div class="repository" style="text-align: center;">
+            <h2>Repositories</h2>
+            <hr>
+            <div *ngFor="let repo of repos">
+                <h4>{{ user.name}}</h4>
+                <h4>{{repo.name}} </h4>
+                <p>{{repo.description}} </p> 
+                 <p>{{user.created_at|date}}</p>
+                <a href="{{repo.html_url}}" target="_blank" class="btn btn-info">View On Github</a>
+            </div>
+            <ng-progress></ng-progress>
+        </div>
+    </div>
+</div>
 </div>

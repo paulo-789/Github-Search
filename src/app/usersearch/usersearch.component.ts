@@ -10,7 +10,14 @@ export class UsersearchComponent implements OnInit {
   repos:any
   username:any;
   
-  constructor(private githubhttpService:GithubHttpService) { }
+  constructor(private githubhttpService:GithubHttpService) { 
+    this.githubhttpService.getUser().subscribe(user => {
+    this.user = user;
+
+  });
+  this.githubhttpService.getRepos().subscribe(repos => {
+    this.repos = repos;
+  }); }
   dosearch(){
     this.githubhttpService.updateUsername(this.username);
  
