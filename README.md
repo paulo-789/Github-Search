@@ -8,18 +8,18 @@
 
 
 ## Description
-Github Search is an application that one may use to search for useras i n github
+Github Search is an application that one may use to search for users on github.
 
 
 ## Project set up
  * Open the terminal in your device.
  * git clone
- * cd Quotes
+ * cd github search
  * use code or atom to open
 
 
 ## Live Link
- https://paulo-789.github.io/Quotes/
+ 
 
 ## Technologies used
 
@@ -27,10 +27,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 ## Behaviour Driven Development(BDD)
-The app contains Quotes ,It contains the thumbs up to like and the thumbs down  to dislike .It also contains a details button where one can view the details .You can also add the quote .One is require to fill in his/her name ,the author and the quote and submit.
+When the app  is opened it takes one to home(his/her account) .When one wants to look for someone on github ,you have to click on the search in the navbar.Then you are taken to another page where there is a space  to type the user name of the person he/she is looking for .After that the page loads and display the persons name and repositories.You also have the option of viewing on github. 
 
-### Contribution
- Feel free to air out you views of what you think I should improve on or what I should stop doing.
 
  ### Contacts
   Email:paulnyango021@gmail.com
