@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {path:'home', component:SearchComponent},
   {path: 'search', component:UsersearchComponent},
+  { path:'**', component:NotFoundComponent},
 ];
 
 @NgModule({
