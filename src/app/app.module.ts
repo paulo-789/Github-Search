@@ -8,11 +8,13 @@ import { SearchComponent } from './search/search.component';
 import { GithubHttpService } from './github-http.service';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { UsersearchComponent } from './usersearch/usersearch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    UsersearchComponent
   ],
   imports: [
     BrowserModule,
