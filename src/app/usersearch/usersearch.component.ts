@@ -21,7 +21,7 @@ export class UsersearchComponent implements OnInit {
       this.repos = repos;
     })
   }
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }
