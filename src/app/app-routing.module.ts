@@ -7,6 +7,8 @@ const routes: Routes = [
   {path:'home', component:SearchComponent},
   {path: 'search', component:UsersearchComponent},
   { path:'**', component:NotFoundComponent},
+
+  { path: '', redirectTo:"/home", pathMatch:"full"},
 ];
 
 @NgModule({
