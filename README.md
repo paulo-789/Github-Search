@@ -19,7 +19,7 @@ Github Search is an application that one may use to search for users on github.
 
 
 ## Live Link
- 
+ https://paulo-789.github.io/Github-Search/
 
 ## Technologies used
 
